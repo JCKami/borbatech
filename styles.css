@@ -2,7 +2,7 @@
 
 .logo {
   width: 100px;   /* Set the desired width */
-  height: auto;   /* Maintains aspect ratio */
+  height: 100px;   /* Maintains aspect ratio */
 }
 
 body {
