@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.logo {
-  width: 250px;   /* Set the desired width */
-  height: 250px;   /* Maintains aspect ratio */
-}
-
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -13,8 +8,8 @@ body {
   line-height: 1.6;
 }
   .logo {
-  width: 500px;   /* Set the desired width */
-  height: 500px;   /* Maintains aspect ratio */
+  width: 420px;   /* Set the desired width */
+  height: 420px;   /* Maintains aspect ratio */
 }
 
 header {
