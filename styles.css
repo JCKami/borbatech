@@ -12,6 +12,11 @@ body {
   color: #3a006f;
   line-height: 1.6;
 }
+  .logo {
+  width: 100px;   /* Set the desired width */
+  height: 100px;   /* Maintains aspect ratio */
+}
+
 header {
   background: linear-gradient(90deg, #7b2ff7, #f107a3);
   color: white;
