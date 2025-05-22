@@ -1,11 +1,172 @@
+
+The task is to create an informative index page about IT support. This should be a single HTML file with inline CSS and possibly JavaScript for interactivity if useful. The page should have modern styling, clear structure, and cover key information on IT support. I will include sections like:
+
+- What is IT Support?
+- Types of IT Support
+- Benefits of IT Support
+- Common IT Support Services
+- How to contact IT Support
+
+I'll use a clean, modern layout with purple accent colors to keep consistency and attractiveness. The page will be responsive and visually pleasing with headings, paragraphs, and some icons or visuals made with CSS shapes or emoji for simplicity.
+
+No dependent files needed. Will create a single `index.html` with all inline styles.
+
+I will now create the complete HTML content.
+
+
+`index.html`
+```html
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Meu Site</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Borba Tech - Suporte de TI - Informações Importantes</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f0ff;
+    color: #3a006f;
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(90deg, #7b2ff7, #f107a3);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(123,47,247,0.4);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+  }
+  main {
+    max-width: 900px;
+    margin: 2rem auto 4rem auto;
+    padding: 0 1rem;
+  }
+  section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(123, 47, 247, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.3s ease;
+  }
+  section:hover {
+    box-shadow: 0 6px 20px rgba(123, 47, 247, 0.3);
+  }
+  h2 {
+    color: #7200e2;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #f107a3;
+    padding-bottom: 0.3rem;
+  }
+  p {
+    font-size: 1rem;
+    color: #440066;
+  }
+  ul {
+    padding-left: 1.2rem;
+    color: #4b0070;
+  }
+  li {
+    margin-bottom: 0.6rem;
+  }
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: #7b2ff7;
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+  a.contact-link {
+    color: #f107a3;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  a.contact-link:hover {
+    border-color: #f107a3;
+  }
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+    section {
+      padding: 1.2rem;
+    }
+  }
+</style>
 </head>
 <body>
-    <h1>Olá, mundo!</h1>
-    <p>Este é meu primeiro site no GitHub Pages.</p>
+  <header>
+    <h1>Suporte de TI</h1>
+    <p>Informações essenciais para resolver seus problemas tecnológicos</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>O que é Suporte de TI?</h2>
+      <p>O Suporte de Tecnologia da Informação (TI) consiste em serviços especializados que auxiliam pessoas e empresas a manter, corrigir e otimizar seus sistemas, hardware e software, garantindo o funcionamento eficiente das tecnologias utilizadas no dia a dia.</p>
+    </section>
+
+    <section>
+      <h2>Tipos de Suporte de TI</h2>
+      <ul>
+        <li><strong>Suporte Técnico:</strong> Assistência para resolução de problemas técnicos com computadores, redes e sistemas.</li>
+        <li><strong>Suporte Remoto:</strong> Atendimento via internet para solucionar problemas sem a necessidade de deslocamento.</li>
+        <li><strong>Suporte Presencial:</strong> Atendimento direto no local para resolver questões mais complexas.</li>
+        <li><strong>Suporte 24/7:</strong> Disponibilidade contínua para suporte emergencial a qualquer hora do dia.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Benefícios do Suporte de TI</h2>
+      <ul>
+        <li>Redução do tempo de inatividade.</li>
+        <li>Aumento da produtividade da equipe.</li>
+        <li>Prevenção contra falhas e ameaças de segurança.</li>
+        <li>Atualização constante dos sistemas e equipamentos.</li>
+        <li>Economia de custos com manutenção preventiva e corretiva.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Serviços Comuns de Suporte de TI</h2>
+      <ul>
+        <li>Instalação e configuração de hardware e software.</li>
+        <li>Monitoramento e manutenção de redes.</li>
+        <li>Backup e recuperação de dados.</li>
+        <li>Suporte e orientação para usuários finais.</li>
+        <li>Gerenciamento de segurança da informação.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Como Contatar o Suporte de TI?</h2>
+      <p>Para solicitar suporte de TI, você pode entrar em contato pelos seguintes canais:</p>
+      <ul>
+        <li>Email: <a href="mailto:suporte@borbatech.com" class="contact-link">suporte@borbatech.com</a></li>
+        <li>Telefone: <a href="tel:+5511999999999" class="contact-link">+55 (11) 99999-9999</a></li>
+        <li>Chat online no nosso site.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 Borba Tech - Todos os direitos reservados.
+  </footer>
 </body>
 </html>
+
+```
