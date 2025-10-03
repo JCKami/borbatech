@@ -225,7 +225,7 @@ header {
 
 /* Footer */
 footer {
-  background-color: var(--black);
+  background-color: var(--white);
   color: var(--gray-400);
   padding: 2rem 1rem;
   text-align: center;
