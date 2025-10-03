@@ -1,105 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TechService Pro</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/lucide-icons@0.226.0/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-
+<body>
   <!-- Header -->
-  <header class="bg-white shadow-sm border-b">
-    <div class="max-w-6xl mx-auto px-4 py-6">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l4.293 4.293A4.991 4.991 0 0110 6h4a4.991 4.991 0 011.707 1.293L19 3M7 17h10a4 4 0 004-4v-1a4 4 0 00-4-4H7a4 4 0 00-4 4v1a4 4 0 004 4z"></path>
-            </svg>
-          </div>
-          <div>
-            <h1 class="text-2xl font-bold text-gray-900">TechService Pro</h1>
-            <p class="text-sm text-gray-600">Técnico em Informática</p>
-          </div>
+  <header>
+    <div class="container">
+      <div class="header-brand">
+        <div class="brand-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9.75 17L8 21h8l-1.75-4M4 4h16v10H4z" />
+          </svg>
         </div>
-        <div class="hidden md:flex items-center gap-6 text-sm text-gray-600">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8h16M2 12h16m-6 4h6"></path></svg>
-            <span>(11) 99999-9999</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8h16M2 12h16m-6 4h6"></path></svg>
-            <span>Seg-Sex: 8h-18h</span>
-          </div>
+        <div>
+          <h1 class="brand-title">TechService Pro</h1>
+          <p class="brand-subtitle">Técnico em Informática</p>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="py-20 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-        Soluções Completas em
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600"> Informática</span>
-      </h2>
-      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-        Técnico especializado com mais de 5 anos de experiência em manutenção, reparo e suporte técnico.
-        Atendimento rápido, confiável e com garantia.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <button class="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105">
-          Solicitar Orçamento
-        </button>
-        <button class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300">
-          Ver Serviços
-        </button>
-      </div>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>
+      Soluções Completas em
+      <span class="gradient">Informática</span>
+    </h2>
+    <p>
+      Técnico especializado com mais de 5 anos de experiência em manutenção, reparo e suporte técnico.
+      Atendimento rápido, confiável e com garantia.
+    </p>
+    <div class="buttons">
+      <button class="btn-primary">Solicitar Orçamento</button>
+      <button class="btn-secondary">Ver Serviços</button>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="py-16 px-4 bg-white">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <h3 class="text-3xl font-bold text-gray-900 mb-4">Nossos Serviços</h3>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          Oferecemos uma ampla gama de serviços técnicos para resolver todos os seus problemas de informática
-        </p>
-      </div>
+  <!-- Services (exemplo com 1 card) -->
+  <section class="services">
+    <div class="container">
+      <h3 class="section-title">Nossos Serviços</h3>
+      <p class="section-subtitle">Oferecemos uma ampla gama de serviços técnicos para resolver todos os seus problemas de informática</p>
       
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Exemplo de Serviço -->
-        <div class="bg-gradient-to-br from-white to-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
-          <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 12L9 6l7 6-7 6-7-6z"></path></svg>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9.75 17L8 21h8l-1.75-4M4 4h16v10H4z" />
+            </svg>
           </div>
-          <h4 class="text-xl font-semibold text-gray-900 mb-3">Manutenção de Computadores</h4>
-          <p class="text-gray-600 leading-relaxed">Diagnóstico, limpeza, troca de peças e otimização de desempenho para desktops e notebooks.</p>
+          <h4 class="service-title">Manutenção de Computadores</h4>
+          <p class="service-desc">Diagnóstico, limpeza, troca de peças e otimização de desempenho para desktops e notebooks.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black text-gray-400 py-8 px-4">
-    <div class="max-w-6xl mx-auto text-center">
-      <div class="flex items-center justify-center gap-3 mb-4">
-        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
-          <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l4.293 4.293A4.991 4.991 0 0110 6h4a4.991 4.991 0 011.707 1.293L19 3M7 17h10a4 4 0 004-4v-1a4 4 0 00-4-4H7a4 4 0 00-4 4v1a4 4 0 004 4z"></path></svg>
-        </div>
-        <span class="text-white font-semibold">TechService Pro</span>
+  <footer>
+    <div class="footer-logo">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9.75 17L8 21h8l-1.75-4M4 4h16v10H4z" />
+        </svg>
       </div>
-      <p class="text-sm">
-        © 2024 TechService Pro. Todos os direitos reservados. | Técnico especializado em informática
-      </p>
+      <span>TechService Pro</span>
     </div>
+    <p class="footer-text">© 2024 TechService Pro. Todos os direitos reservados. | Técnico especializado em informática</p>
   </footer>
-
 </body>
-
 </html>
