@@ -1,118 +1,260 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TechService Pro</title>
-  
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+:root {
+  --blue: #2563eb;
+  --cyan: #06b6d4;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-600: #4b5563;
+  --gray-900: #111827;
+  --white: #ffffff;
+  --black: #000000;
+}
 
-  <!-- Lucide Icons via CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <style>
-    /* Caso queira customizar Tailwind no futuro */
-    @layer utilities {
-      .text-gradient {
-        @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600;
-      }
-    }
-  </style>
-</head>
-<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, var(--gray-50), #eff6ff);
+  min-height: 100vh;
+}
 
-  <!-- Header -->
-  <header class="bg-white shadow-sm border-b">
-    <div class="max-w-6xl mx-auto px-4 py-6">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
-            <i data-lucide="monitor" class="w-6 h-6 text-white"></i>
-          </div>
-          <div>
-            <h1 class="text-2xl font-bold text-gray-900">TechService Pro</h1>
-            <p class="text-sm text-gray-600">Técnico em Informática</p>
-          </div>
-        </div>
-        <div class="hidden md:flex items-center gap-6 text-sm text-gray-600">
-          <div class="flex items-center gap-2">
-            <i data-lucide="phone" class="w-4 h-4"></i>
-            <span>(11) 99999-9999</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <i data-lucide="clock" class="w-4 h-4"></i>
-            <span>Seg-Sex: 8h-18h</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+/* Container padrão */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
 
-  <!-- Hero Section -->
-  <section class="py-20 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-        Soluções Completas em
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600"> Informática</span>
-      </h2>
-      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-        Técnico especializado com mais de 5 anos de experiência em manutenção, reparo e suporte técnico. 
-        Atendimento rápido, confiável e com garantia.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <button class="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105">
-          Solicitar Orçamento
-        </button>
-        <button class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300">
-          Ver Serviços
-        </button>
-      </div>
-    </div>
-  </section>
+/* Header */
+header {
+  background-color: var(--white);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #e5e7eb;
+}
 
-  <!-- Serviços (exemplo) -->
-  <section class="py-16 px-4 bg-white">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <h3 class="text-3xl font-bold text-gray-900 mb-4">Nossos Serviços</h3>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          Oferecemos uma ampla gama de serviços técnicos para resolver todos os seus problemas de informática
-        </p>
-      </div>
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div class="bg-gradient-to-br from-white to-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
-          <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-            <i data-lucide="monitor" class="w-6 h-6 text-white"></i>
-          </div>
-          <h4 class="text-xl font-semibold text-gray-900 mb-3">Manutenção de Computadores</h4>
-          <p class="text-gray-600 leading-relaxed">Diagnóstico, limpeza, troca de peças e otimização de desempenho para desktops e notebooks.</p>
-        </div>
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to right, var(--blue), var(--cyan));
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-        <!-- Adicione outros cards aqui, copiando a estrutura acima -->
-      </div>
-    </div>
-  </section>
+.brand-icon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
 
-  <!-- Contato / Footer -->
-  <footer class="bg-black text-gray-400 py-8 px-4">
-    <div class="max-w-6xl mx-auto text-center">
-      <div class="flex items-center justify-center gap-3 mb-4">
-        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
-          <i data-lucide="monitor" class="w-4 h-4 text-white"></i>
-        </div>
-        <span class="text-white font-semibold">TechService Pro</span>
-      </div>
-      <p class="text-sm">
-        © 2024 TechService Pro. Todos os direitos reservados. | Técnico especializado em informática
-      </p>
-    </div>
-  </footer>
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--gray-900);
+}
 
-  <script>
-    lucide.createIcons();
-  </script>
-</body>
-</html>
+.brand-subtitle {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--gray-900);
+  margin-bottom: 1rem;
+}
+
+.hero .gradient {
+  background: linear-gradient(to right, var(--blue), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--gray-600);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media(min-width: 640px) {
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.btn-primary {
+  background: linear-gradient(to right, var(--blue), var(--cyan));
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  background-color: transparent;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #ebf8ff;
+}
+
+/* Services Section */
+.services {
+  background-color: white;
+  padding: 4rem 1rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--gray-900);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--gray-600);
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.service-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media(min-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 1024px) {
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  background: linear-gradient(to bottom right, white, var(--gray-100));
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #e5e7eb;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(to right, var(--blue), var(--cyan));
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.service-icon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--gray-900);
+}
+
+.service-desc {
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  background-color: var(--black);
+  color: var(--gray-400);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo .icon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(to right, var(--blue), var(--cyan));
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo svg {
+  width: 16px;
+  height: 16px;
+  color: white;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+}
